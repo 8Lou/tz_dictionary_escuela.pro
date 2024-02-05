@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import WordList from './WordList';
 import WordForm from './WordForm';
-import { Word } from '../types';
+import { Word } from '../types/types';
+import { Button } from '@mui/material';
 
 
 const AdminPanel: React.FC = () => {
@@ -30,7 +31,12 @@ const AdminPanel: React.FC = () => {
 
   return (
     <div>
+      {/* Кнопка для добавления нового слова */}
+      {/* <Button onClick={handleAdd}>Add Word</Button> */}
+
+      {/* Компонент для отображения списка слов */}
       <WordList words={words} onEdit={handleEdit} onDelete={handleDelete} onAdd={handleAdd} />
+      {/* Форма для добавления или редактирования слова */}
       <WordForm onSaveWord={handleSave} />
     </div>
   );

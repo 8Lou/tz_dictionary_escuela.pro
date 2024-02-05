@@ -7,4 +7,4 @@ Stack & technologies:
 2. npm install redux react-redux redux-saga
 3. npm install firebase
 4. npm install gh-pages --save-dev
-5. npm install gh-pages --save-dev
+5. npm install @mui/material @emotion/react @emotion/styled

@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React, { useState } from 'react';
 
 interface Props {
@@ -23,7 +24,7 @@ const WordForm: React.FC<Props> = ({ onSaveWord }) => {
       <input type="text" name="spanish" value={word.spanish} onChange={handleChange} placeholder="Spanish Word" />
       <input type="text" name="russian" value={word.russian} onChange={handleChange} placeholder="Russian Translation" />
       <input type="text" name="english" value={word.english} onChange={handleChange} placeholder="English Translation" />
-      <button type="submit">Add Word</button>
+      <Button type="submit">Add Word</Button>
     </form>
   );
 }

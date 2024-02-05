@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React from 'react';
 
 interface Word {
@@ -22,13 +23,13 @@ const WordList: React.FC<Props> = ({ words, onEdit, onDelete, onAdd }) => {
         {words.map((word, index) => (
           <li key={index}>
             {word.spanish} - {word.russian} - {word.english}
-            <button onClick={() => onEdit(index)}>Edit</button>
-            <button onClick={() => onDelete(index)}>Delete</button>
+            <Button variant="contained" color="primary" onClick={() => onEdit(index)}>Edit</Button>
+            <Button variant="contained" color="primary" onClick={() => onDelete(index)}>Delete</Button>
           </li>
         ))}
       </ul>
       {/* button for adding new word */}
-      <button onClick={onAdd}>Add New Word</button>
+      <Button variant="contained" color="primary" onClick={onAdd}>Add New Word</Button>
     </div>
   );
 }

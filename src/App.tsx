@@ -1,26 +1,27 @@
 import React from 'react';
-import './index.css';
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import AdminPanel from './components/AdminPanel';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './store/rootReducer';
 import WordListDisplay from './components/WordListDisplay';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+// Создаем хранилище
+const store = configureStore({
+  reducer: rootReducer,
+});
 
 const theme = createTheme();
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-    <div className="App">
-      <header className="App-header">     
-      </header>
-      <div>
-      <h1>Административное Приложение для Управления Словарями
-</h1>
-        <WordListDisplay />
-        <AdminPanel />
-    </div>
-    </div>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <div>
+          <h1>Административное Приложение для Управления Словарями</h1>
+          <WordListDisplay />
+        </div>
+      </ThemeProvider>
+    </Provider>
   );
 }
 

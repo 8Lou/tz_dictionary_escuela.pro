@@ -6,4 +6,5 @@ const rootReducer = combineReducers({
   
 });
 
+export type RootState = ReturnType<typeof rootReducer>; // Создание типа RootState на основе корневого редюсера
 export default rootReducer;

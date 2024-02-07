@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
    
    const rootReducer = combineReducers({
      words: wordReducer
-     // Другие редьюсеры
+     
    });
 
    export default rootReducer;

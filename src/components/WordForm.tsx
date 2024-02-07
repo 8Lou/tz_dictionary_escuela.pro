@@ -16,8 +16,7 @@ const WordForm: React.FC<Props> = ({ onSaveWord }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSaveWord(word);
-    setWord({ spanish: '', russian: '', english: '' }); // сброс формы после сохранения
-  };
+    setWord({ spanish: '', russian: '', english: '' });};
 
   return (
     <form onSubmit={handleSubmit}>

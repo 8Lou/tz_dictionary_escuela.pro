@@ -28,7 +28,6 @@ const WordList: React.FC<Props> = ({ words, onEdit, onDelete, onAdd }) => {
           </li>
         ))}
       </ul>
-      {/* button for adding new word */}
       <Button variant="contained" color="primary" onClick={onAdd}>Add New Word</Button>
     </div>
   );

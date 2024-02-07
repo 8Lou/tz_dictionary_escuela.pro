@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import  { RootState} from '../store/rootReducer'; // Укажите путь к вашему корневому редьюсеру
+import  { RootState} from '../store/rootReducer';
 import { loadWordLists } from '../store/wordListsSlice';
 
 const HomePage = (): JSX.Element => {
@@ -15,8 +15,7 @@ const HomePage = (): JSX.Element => {
 
   return (
     <div>
-      {/* Здесь ваш код для отображения списка слов, когда он будет загружен */}
-    </div>
+      </div>
   );
 }
 

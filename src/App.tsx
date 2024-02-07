@@ -17,7 +17,7 @@ function App() {
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <div>
-          <h1>Административное Приложение для Управления Словарями</h1>
+          <h1>Административное Приложение <br/> для Управления Словарями</h1>
           <WordListDisplay />
         </div>
       </ThemeProvider>

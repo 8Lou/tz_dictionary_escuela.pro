@@ -6,6 +6,6 @@ import wordListsSaga from '../sagas/wordListsSaga';
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
-sagaMiddleware.run(wordListsSaga); // Запускаем сагу
+sagaMiddleware.run(wordListsSaga);
 
 export default store;
